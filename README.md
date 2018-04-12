@@ -26,7 +26,7 @@ Before using this plugin, you must ensure that `credo` is installed on your syst
    $ mix archive.build
    $ mix archive.install
    $ cd -
-   $ rm -rf bunt
+   $ rm -rf credo
    ```
 
 
