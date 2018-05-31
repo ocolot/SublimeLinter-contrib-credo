@@ -16,7 +16,6 @@ from SublimeLinter.lint import Linter, util
 class Credo(Linter):
     """Provides an interface to credo."""
 
-    syntax = 'elixir'
     cmd = 'mix credo --format=flycheck @'
     executable = 'elixir'
     version_args = '--version'
@@ -33,7 +32,9 @@ class Credo(Linter):
     error_stream = util.STREAM_BOTH
     selectors = {}
     word_re = None
-    defaults = {}
+    defaults = {
+        'selector': 'source.ex - meta.attribute-with-value, source.exs, source.eex'
+    }
     inline_settings = None
     inline_overrides = None
     comment_re = None
